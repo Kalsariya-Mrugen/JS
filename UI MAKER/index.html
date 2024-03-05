@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UI Maker</title>
+    <style>
+      .main {
+        margin: auto;
+        width: 10%;
+      }
+      #box div img {
+        height: 200px;
+        width: 200px;
+      }
+      #box {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+      }
+      #data {
+        height: 200px;
+        width: 200px;
+        background-color: aliceblue;
+        margin: auto;
+        padding: 10px;
+      }
+      #title {
+        width: 75%;
+        margin: 10px;
+        padding: 10px;
+        text-align: center;
+        font-size: 15px;
+      }
+      #img {
+        width: 75%;
+        margin: 10px;
+        padding: 10px;
+      }
+      #price{
+        
+        width: 75%;
+        margin: 10px;
+        padding: 10px;
+      }
+      #ok{
+        width: 50%;
+        margin: 0 0 0 50px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <form id="data">
+        <input type="text" placeholder="Title" id="title" /><br />
+        <input type="url" id="img" placeholder="Enter URL" /><br />
+        <input type="number" placeholder="Enter Price" id="price" /><br />
+        <input type="submit" id="ok">
+      </form>
+    </div>
+    <hr />
+    <div id="box"></div>
+  </body>
+  <script src="./index.js"></script>
+</html>

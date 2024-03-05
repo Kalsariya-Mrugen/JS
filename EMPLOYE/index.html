@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Employe</title>
+        <style>
+            body {
+                background-color: rgb(147, 204, 255);
+            }
+
+            .main {
+                width: 30%;
+                margin: 50px auto;
+                background-color: rgb(182, 180, 180);
+            }
+
+            #name,
+            #jobRole,
+            #department,
+            #salary,
+            #contactEmail,
+            #workExperience,
+            #hire {
+                width: 95%;
+                margin: 10px;
+                padding: 10px 0;
+            }
+
+            #title {
+                padding: 18px;
+                text-align: center;
+                font-size: 30px;
+            }
+
+            table {
+                width: 100%;
+                border-collapse: collapse;
+            }
+            #t2{
+                background-color: rgba(21, 255, 0, 0.61);
+                width: 100%;
+                border-collapse: collapse;
+                border: 1px solid rgb(187, 248, 246);
+            }
+            #total_e,#total_s{
+                background-color: rgb(0, 255, 195);
+            }
+
+            #h3 {
+                text-align: center;
+            }
+
+            tr{
+                background-color: rgba(234, 201, 109, 0.61);
+                border: 1px solid rgb(187, 248, 246);
+                border-collapse: collapse;
+            }
+
+            th,
+            td {
+                padding: 8px;
+                text-align: center;
+                border-bottom: 1px solid #63e7e9;
+            }
+
+            th {
+                font-size: 20px;
+                height: 50px;
+                background-color: #b5a23a;
+                border: 1px solid rgb(187, 248, 246);
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="main">
+            <h2 id="title">Hire a new Employee</h2>
+            <form id="employeeForm">
+                <input type="text" id="name"  placeholder="Name" required><br>
+                <select id="jobRole" required>
+                    <option value="">Select Job Role</option>
+                    <option value="Software Developer">Software Developer</option>
+                    <option value="Web Developer">Web Developer</option>
+                    <option value="Data Analyst">Data Analyst</option>
+                </select><br>
+                <select id="department" required>
+                    <option value="">Select Department</option>
+                    <option value="IT">IT</option>
+                    <option value="HR">HR</option>
+                    <option value="Marketing">Marketing</option>
+                </select><br>
+                <input type="number" id="salary" placeholder="Monthly Salary" required><br>
+                <input type="number" id="workExperience" placeholder="Pre Work Experience"
+                    required>
+                <input type="email" id="contactEmail" placeholder="Contact Email" required><br><br>
+                <input type="submit" id="hire" value="Hire">
+            </form>
+        </div>
+        <h3 id="h3">Employee List</h3>
+        <table id="employeeTable">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Job Role</th>
+                    <th>Department</th>
+                    <th>Salary</th>
+                    <th>Work Experience</th>
+                    <th>Contact Email</th>
+                    <th>Role Type</th>
+                    <th>Fire Employee</th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+            </tbody>
+        </table>
+        <table id="t2">
+            <tbody id="tbody-2">
+            <tr>
+                <td>TOTAL EMPLOYEE</td>
+                <td id="total_e"></td>
+                <td>TOTAL SALARY</td>
+                <td id="total_s"></td>
+            </tr>
+        </tbody></table>
+    </body>
+    <script src="./index.js"></script>
+
+</html>
