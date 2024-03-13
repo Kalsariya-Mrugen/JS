@@ -1,39 +1,49 @@
 let datas = []
 
 const blog = () => {
+
     document.getElementById("blog").innerHTML = ""
     datas.map((ele, i) => {
-        let div1 = document.createElement("div")
-        let img = document.createElement("img")
-        img.src = ele.img
-        let div2 = document.createElement("div")
+
+        let div = document.createElement("div")
         let title = document.createElement("h1")
         title.innerHTML = ele.title
+        let img = document.createElement("img")
+        img.src = ele.img
         let contant = document.createElement("h4")
         contant.innerHTML = ele.contant
-        let btn = document.createElement("button")
-        btn.innerHTML = "Delete"
-        let l_btn = document.createElement("button")
-        l_btn.innerHTML = "LIKE"
-        div1.append(img)
-        div2.append(title, contant)
+        let btn = document.createElement("i")
+        btn.innerHTML = '<i class="fa-solid fa-trash"></i>'
+        let l_btn = document.createElement("i")
+        l_btn.innerHTML = '<i class="fa-regular fa-heart"></i>'
+        l_btn.setAttribute("class","like_btn")
+        div.append(title,l_btn,img,contant,btn)
+        
 
         l_btn.addEventListener("click", () => {
-            alert("You LIKED This Blog")
+            l_btn.classList.toggle('heart');
+            if(l_btn.innerHTML!='<i class="fa-solid fa-heart"></i>'){
+                l_btn.innerHTML='<i class="fa-solid fa-heart"></i>';
+                alert(`You Liked ${ele.title} POST`);
+            }
+            else{
+                l_btn.innerHTML = '<i class="fa-regular fa-heart"></i>';
+                alert(`You Unliked ${ele.title} POST`)
+            }
         })
+        
         btn.addEventListener("click", () => {
             datas.splice(i, 1)
             blog();
-
         })
         title.setAttribute("class", "title");
-        document.getElementById("blog").append(div1,div2,l_btn,btn)
+        document.getElementById("blog").append(div)
     })
 }
 
 
 
-const show = (e) => {
+const show = (e) => { 
     e.preventDefault();
 
     let title = document.getElementById('title').value;
@@ -50,4 +60,4 @@ const show = (e) => {
 }
 
 
-document.getElementById("submit").addEventListener("click", show);
+document.getElementById("form").addEventListener("submit", show);
