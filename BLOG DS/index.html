@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLOG</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            width: 80%;
+            margin: auto;
+            background-image: url(https://www.hdwallpapers.in/download/blue_black_lines_shades_dark_background_hd_black-HD.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        #main{
+            width: 25%;
+            margin: 30px auto 5px auto;
+            padding: 10px;
+            text-align: center;
+            background-color: transparent;
+            backdrop-filter: blur(90px);
+            border-radius: 20px;
+        }
+
+        #head{
+            font-size: 200%;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: aliceblue;
+        }
+
+        .mr{
+            width: 90%;
+            margin: 10px 0;
+            padding: 5px;
+            font-size: 16px;
+        }
+        #title{
+            text-transform: capitalize;
+        }
+        
+        #ta{
+            color: black;
+            margin: 10px 0;
+            font-size: 16px;
+            resize: none;
+            width: 90%;
+        }
+
+        #submit{
+            margin: 10px;
+            padding: 4px 0;
+            width: 90%;
+            font-size: 15px;
+            border-radius: 13px;
+            border: 1px solid black;
+        }
+
+        #form{
+            padding: 10px;
+        }
+        
+        #post{
+            display : inline-block;
+            font-size: 20px;
+            background-color: rgb(255, 255, 255);
+            margin: 0 0 0 10px;
+            color: rgb(0, 0, 0);
+        }
+        
+        #blog{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            margin: 5px 0px 5px 0px;
+        }
+      
+        #blog >div{   
+            padding: 10px;
+            margin: 10px 10px;
+            background-color: bisque;
+            border-radius: 30px;
+            position: relative;
+        }
+
+        #blog>div>img{
+            display: block;
+            margin: auto;    
+            width: 100%;
+            background-size: contain;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 20px;
+        }
+
+        #blog>div>h1{
+            display: inline-block;
+            text-indent: 10px;
+            text-transform: capitalize;
+        }
+        .like_btn{
+            position: absolute;
+            font-size: 30px;
+            right:10%;
+            cursor: pointer;
+        }
+        .heart{
+            color: red;
+        }
+        .fa-trash{
+            margin-left: 90%;
+            font-size: 15px;
+            cursor: pointer;
+        }
+        #blog>div>h4{
+            margin-top: 3px;
+            text-indent: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <h1 id="head">Post To Your Blog</h1>
+        <form id="form">
+            <input type="text" placeholder="Title" class="mr" id="title" required><br>
+            <input type="url" placeholder="Image URL" class="mr" id="img" required><br>
+            <textarea name="" id="ta" cols="30" rows="6" placeholder=" Contant" required></textarea><br>
+            <input type="submit" value="POST" id="submit">
+        </form>
+    </div>
+    <span id="post">YOUR POST :</span>
+    <br>
+    <div id="data">
+        <div id="blog">
+        </div>
+    </div>
+</body>
+<script src="./index.js"></script>
+</html>
